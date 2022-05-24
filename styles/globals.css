@@ -1,0 +1,461 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Quicksand:wght@500&display=swap');
+
+
+:root {
+  --Title-font: font-family: 'Playfair Display', serif;
+  --Regular-font: font-family: 'Playfair Display', serif;
+
+  --button-bg: #0FA5E8 ;
+
+  --global-bg: linear-gradient(90deg, rgb(115, 115, 115) 2px, transparent 1%) center, linear-gradient(rgb(124, 124, 124) 2px, transparent 1%) center, #706f6f;
+
+  --global--bg-sz: 200px 200px;
+  
+
+}
+
+.react-icons {
+  color: black;
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
+}
+
+.react-icons-web-hosting {
+  color: black;
+  width: 40px;
+  height: 40px;
+}
+
+
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Quicksand', sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+/* NAVBAR */
+
+.talk-hub__navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 1rem 1rem;
+  position: sticky;
+
+  z-index: 999;
+
+  background: var(--global-bg);
+  background-size: var(--global--bg-sz);
+}
+
+.talk-hub__navbar-links {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.talk-hub__navbar-links a {
+  color: black;
+}
+
+.talk-hub__navbar-links a:hover {
+  color: var(--color-button);
+}  
+
+.talk-hub__navbar-links_logo {
+  margin-right: 10rem;
+  margin-left: 20px;
+}
+
+.talk-hub__navbar-links_logo img {
+  width: 60px;
+}
+
+.talk-hub__navbar-links_container {
+  display: flex;
+  flex-direction: row;
+}
+
+.login_button {
+  z-index: 999;
+  padding-top: 4px;
+  height: 33px;
+  border-radius: 5px;
+  margin-right: 1rem;
+}
+
+
+.talk-hub__navbar-links_container p,
+.login_button p,
+.talk-hub__navbar-menu_container p {
+  color: #fff;
+  font-family: var(--Regular-font);
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 25px;
+  text-transform: capitalize;
+
+  margin: 0 1rem;
+  cursor: pointer;
+}
+
+.talk-hub__navbar-menu_container button {
+  padding: 0.5rem 1rem;
+  color: #fff;
+  background: #FF4820;
+  font-family: var(--Regular-font);
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 25px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+
+.talk-hub__navbar-menu {
+  margin-left: 1rem;
+
+  display: none;
+  position: relative;
+}
+
+.talk-hub__navbar-menu svg {
+  cursor: pointer;
+}
+
+.talk-hub__navbar-menu_container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  
+  text-align: start;
+  background: var(--color-footer);
+  padding: 2rem;
+  position: absolute;
+  right: 0;
+  top: 40px;
+  margin-top: 1rem;
+  min-width: 210px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px rgba(0,0, 0,0.2);
+
+}
+
+.talk-hub__navbar-menu_container p {
+  margin: 1rem 0;
+}
+
+.talk-hub__navbar-menu_container-links-sign {
+  display: none;
+}
+
+@media screen and (max-width: 1050px) {
+  .talk-hub__navbar-links_container {
+      display: none;
+  }
+
+  .talk-hub__navbar-links_logo {
+      margin-right: 10rem;
+  }
+
+  .talk-hub__navbar-menu {
+      display: flex;
+  }
+
+  .talk-hub__navbar-menu_container-links-sign {
+      display: none;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .talk-hub__navbar {
+      padding: 1rem 2rem;
+  }
+  .login_button {
+      display: none;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .talk-hub__navbar {
+      padding: 0 1rem;
+  }
+
+  .login_button {
+      display: none;
+  }
+
+  .talk-hub__navbar-menu_container {
+      top: 20px;
+  }
+}
+
+/* HERO */
+
+.hero{
+  background: var(--global-bg);
+  background-size: var(--global--bg-sz);
+}
+
+.hero-img-container {
+    overflow: hidden;
+    flex: 5;
+    display: flex;
+    justify-content: flex-end;
+    align-items: left;
+}
+
+.hero-img-container svg {
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and ( max-width: 950px){
+  .hero-img-container {
+      margin: 1rem 0;
+  }
+  .hero-img{
+      margin-top: 2rem;
+  }
+}
+
+/* SERVICES */
+
+.services {
+  background: var(--global-bg);
+  background-size: var(--global--bg-sz);
+}
+
+/* WEB HOSTING */
+
+.web-hosting {
+  background: var(--global-bg);
+  background-size: var(--global--bg-sz);
+}
+
+/* GAMING HOSTING */
+
+.gaming-hosting {
+  background: var(--global-bg);
+  background-size: var(--global--bg-sz);
+}
+
+/* PRICING */
+
+.pricing {
+  background-image: linear-gradient(to right top, #dadada, #e0e0e0, #e6e6e6, #ececec, #f2f2f2, #f5f5f5, #f8f8f8, #fbfbfb, #fcfcfc, #fdfdfd, #fefefe, #ffffff);
+}
+
+/* CLOUD HOSTING */
+
+.cloud-hosting {
+  background:linear-gradient(306deg, rgba(29, 29, 29, 1) 0%, rgba(29, 29, 29, 1) 16%, rgba(26, 26, 26, 1) 61%, rgba(26, 26, 26, 1) 71%, rgba(29, 29, 29, 1) 100%);
+
+}
+
+/* FEATURES BANNER */
+
+.gpt3__whatgpt3 {
+  display: flex;
+  flex-direction: column;
+
+  padding: 2rem;
+
+  background:conic-gradient(from 90deg at 50% 50%, rgba(139, 138, 138, 1) 0%, rgba(127, 127, 127, 1) 100%);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.gpt3__whatgpt3-feature {
+  display: flex;
+}
+
+/* Customizing feature component as per needs */
+.gpt3__whatgpt3-feature .gpt3__features-container__feature {
+  margin: 0;
+}
+
+/* Customizing feature component as per needs */
+.gpt3__whatgpt3-feature .gpt3__features-container_feature-text {
+  max-width: 700px;
+}
+
+.gpt3__whatgpt3-heading {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  
+  margin: 4rem 0 2rem;
+}
+
+.gpt3__whatgpt3-heading h1 {
+  font-size: 34px;
+  line-height: 45px;
+  font-weight: 800;
+  font-family: var(--Title-font);
+  max-width: 510px;
+}
+
+.gpt3__whatgpt3-heading p {
+  font-family: var(--Regular-font);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 30px;
+  cursor: pointer;
+}
+
+.gpt3__whatgpt3-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+
+  margin-top: 2rem;
+}
+
+/* Customizing feature component as per needs */
+.gpt3__whatgpt3-container .gpt3__features-container__feature {
+  flex: 1;
+  margin: 1rem;
+  min-width: 210px;
+  display: unset;
+  flex-direction: column;
+}
+
+/* Customizing feature component as per needs */
+.gpt3__whatgpt3-container .gpt3__features-container_feature-text {
+  margin-top: 0.5rem;
+}
+
+@media screen and (max-width: 850px) {
+  .gpt3__whatgpt3-heading {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 0rem;
+  }
+
+  .gpt3__whatgpt3-heading p {
+      margin-top: 1rem;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  /* Customizing feature component as per needs */
+  .gpt3__whatgpt3-feature .gpt3__features-container__feature {
+      flex-direction: column;
+  }
+
+  /* Customizing feature component as per needs */
+  .gpt3__whatgpt3-feature .gpt3__features-container_feature-text {
+      margin-top: 0.5rem;
+  }
+
+  .gpt3__whatgpt3-heading h1 {
+      font-size: 28px;
+      line-height: 40px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  /* Customizing feature component as per needs */
+  .gpt3__whatgpt3-container .gpt3__features-container__feature {
+      margin: 1rem 0;
+      min-width: 100%;
+  }
+}
+
+.gpt3__features-container__feature {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: row;
+
+  margin: 1rem;
+}
+
+.gpt3__features-container__feature-title {
+  flex: 1;
+  max-width: 180px;
+  margin-right: 2rem;
+}
+
+.gpt3__features-container__feature-title h1 {
+  font-family: var(--Title-font);
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: -0.04em;
+  color: #fff;
+}
+
+.gpt3__features-container__feature-title div {
+  width: 38px;
+  height: 3px;
+  background: linear-gradient(to right, #ffffff, #f2f2f2, #e5e5e5, #d8d8d8, #cbcbcb);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin-bottom: 0.25rem;
+}
+
+.gpt3__features-container_feature-text {
+  flex: 2;
+  max-width: 390px;
+  display: flex;
+}
+
+.gpt3__features-container_feature-text p {
+  font-family: var(--Regular-font);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+@media screen and (max-width: 550px) {
+  .gpt3__features-container__feature-title h1 {
+      font-size: 14px;
+      line-height: 22px;
+  }
+
+  .gpt3__features-container_feature-text p {
+      font-size: 12px;
+      line-height: 20px;
+  }
+
+  .gpt3__features-container__feature {
+      margin: 1rem 0;
+  }
+}
+
+/* TESTIMONIAL */
+
+.testimonial {
+  background: var(--global-bg);
+  background-size: 340px 160px;
+}
+
+/* FOOTER */
+
+.footer {
+  background:linear-gradient(306deg, rgba(29, 29, 29, 1) 0%, rgba(29, 29, 29, 1) 16%, rgba(26, 26, 26, 1) 61%, rgba(26, 26, 26, 1) 71%, rgba(29, 29, 29, 1) 100%);
+}

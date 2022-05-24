@@ -1,0 +1,10 @@
+export { default as Navbar } from '../Navbar/Navbar';
+export { default as Hero } from '../Hero/Hero';
+export { default as Services } from '../Services/Services';
+export { default as WebHosting } from '../WebHosting/WebHosting';
+export { default as GamingHosting } from '../GamingHosting/GamingHosting';
+export { default as CloudHosting } from '../CloudHosting/CloudHosting';
+export { default as Pricing } from '../Pricing/Pricing';
+export { default as FeaturesBanner } from '../FeaturesBanner/FeaturesBanner';
+export { default as Testimonial } from '../Testimonial/Testimonial';
+export { default as Footer } from '../Footer/Footer';
