@@ -25,7 +25,8 @@ const pathVariants = {
     pathLength: 1,
     transition: {
       duration:3,
-      ease: "easeInOut"
+      ease: "easeInOut",
+      delay: 0.6
     }
   }
 }
@@ -34,7 +35,10 @@ const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false)
 
   return (
-      <div className='talk-hub__navbar'>
+      <motion.div className='talk-hub__navbar'
+        initial={{ opacity: 0, y: -180 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ ease: 'easeInOut', duration: .6, delay: 0.6 }}>
 
           <div className='talk-hub__navbar-links'>
               <div className='talk-hub__navbar-links_logo'>
@@ -71,7 +75,7 @@ const Navbar = () => {
               )}
           </div>     
 
-      </div>
+      </motion.div>
   )
 }
 
